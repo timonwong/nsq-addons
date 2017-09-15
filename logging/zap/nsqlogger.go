@@ -10,13 +10,13 @@ var (
 	spaces = regexp.MustCompile(`\s+`)
 )
 
-// ZapNSQLogger wraps zap logger for nsq producer.
-type ZapNSQLogger struct {
+// ZapNsqLogger wraps zap logger for nsq producer.
+type ZapNsqLogger struct {
 	logger *zap.Logger
 }
 
 // NewZapNsqLogger returns a new ZapNSQLogger.
-func NewZapNsqLogger(logger *zap.Logger) *ZapNSQLogger {
+func NewZapNsqLogger(logger *zap.Logger) *ZapNsqLogger {
 	return &ZapNsqLogger{logger: logger}
 }
 
