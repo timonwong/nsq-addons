@@ -1,0 +1,17 @@
+sudo: false
+language: go
+go:
+  - 1.8.x
+
+install:
+  - go get github.com/stretchr/testify
+  - go get go.uber.org/zap
+
+script:
+ - ./test_all.sh
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email: false
